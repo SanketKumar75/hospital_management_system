@@ -7,7 +7,7 @@
 using namespace std;
 
 class patient{
-    public:
+    private:
         int id=12;
         int c;
         int i;
@@ -19,9 +19,21 @@ class patient{
         string lname;
         string occupation;
         string dis;
-        string qual;
         string city;
         
+	public:
+			//Constructor for Default value
+			patient(){
+					id=0;
+					age=0;
+					fname="NoInput";
+					lname="NoInput";
+					occupation="NotDefined";
+					dis="NotDegined";
+					city="Delhi";
+					phno="1234567890";
+					in_date="16/11/20";
+					}	
         int new_p();
         int p_info();
         int list_p();
@@ -30,8 +42,9 @@ class patient{
         int getDoctor();
         string getDept();
 
-        int init(){
-    //cout<<"This too!"<<endl;
+
+    int init(){
+		system("cls");
     cout<<"Enter your choice"<<endl; 
     cout<<"<1>New Patient Entry"<<endl
         <<"<2>Display A Patient's Information"<<endl
@@ -188,11 +201,11 @@ int patient::list_p(){
     fstream Obj("patient.txt");
 	Obj.seekg(0);
 	cout<<right<<setw(70)<<setfill(' ')<<"PATIENT DATABASE"<<endl<<endl;
-	string fname,lname,occupation,p_city,dis,addDate,relDate,dept;
+	string fname,lname,occupation,p_city,dis,in_date,dept;
 	int p_age,p_ID,count=0;
 	long double phnumber,bill;
     cout<<"S.no  "<<"ID\t"<<"Name\t"<<"\tAge(yr)\t"<<"Phone Number\t"
-            <<"Occupation\t"<<"City\t"<<"disease\t"<<"In_Date\t"<<"Department"<<endl;
+            <<"Occupation\t"<<"City\t"<<"\tdisease\t"<<"In_Date\t"<<"Department"<<endl;
 	while(Obj>>id>>fname>>lname>>age>>phno>>
             occupation>>city>>dis>>in_date>>dept)
 	{   count++;
