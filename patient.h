@@ -6,6 +6,7 @@
 #include<iomanip>
 using namespace std;
 
+
 class patient{
     private:
         int id=12;
@@ -47,7 +48,10 @@ class patient{
         int discharge();
         int bill();
         int getDoctor();
+		int check();
         string getDept();
+
+		friend int doctor::avail();
 
 
     int init(){
@@ -57,7 +61,7 @@ class patient{
         <<"<2>Display A Patient's Information"<<endl
         <<"<3>List Of All Patients"<<endl
         <<"<4>Patient Discharge"<<endl
-        <<"<5>Print Reciept"<<endl
+        <<"<5>Check Doctor Availability"<<endl
         <<"<9>Go Back TO Main Menu"<<endl
         <<"<0>To Exit"<<endl;
     cin>>c;
@@ -95,7 +99,7 @@ class patient{
         case 5:
             {
                 cout<<"Print reciept\n";
-                i=bill();
+                i=check();
                 break;
             }
         case 9:
@@ -169,7 +173,7 @@ int patient::p_info(){
 	cin>>x;									 
 	fstream patObj("patient.txt");
 	patObj.seekg(0);
-													//ID,firstname,lastname,age,phnumber,occupation,city,disease,Adate,Rdate,bill,dept
+
 	string fname,lname,occupation,p_city,dis,addDate,relDate,dept;
 	int age,id,count=0;
 	string phno;
@@ -256,7 +260,8 @@ cout<<"\n\nEnter 1 to return to Patient Database\nEnter 2 to Exit."<<endl;
 }
 
 int patient::discharge(){
-    cout<<"patient checkout"<<endl;
+cout<<setw(100)<<"WE ARE HAPPY TO SEE YOU GOOD NOW !!";
+    cout<<"PATIENT CHECKOUT"<<endl;
 		int x;
 	cout<<"\nEnter the ID of the Patient who is being discharged: "<<endl;
 	cin>>x;									 
@@ -362,10 +367,11 @@ int patient::bill(){
 
 
 
-
-
-
-
+int patient::check(){
+	doctor doc;
+		i=doc.avail();
+	return i;
+}
 
 string patient::getDept(){
 	string sp;
