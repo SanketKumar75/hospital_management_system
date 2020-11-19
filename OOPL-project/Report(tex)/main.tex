@@ -1,0 +1,260 @@
+\documentclass[a4paper, 14pt]{report}
+
+\usepackage[english]{babel}
+\usepackage[noheader]{packages/sleek}
+\usepackage{packages/sleek-title}
+\usepackage{packages/sleek-theorems}
+\usepackage{packages/sleek-listings}
+
+% Title-page %
+
+\logo{iiitm.jpg}
+\institute{IIITM- Gwalior}
+\title{Hospital Management System}
+\subtitle{submitted to -Dr. Vinal Patel}
+\author{\textit{Project By:}\\ Sanket Kumar \\ Harshit Singh}
+
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+\romantableofcontents
+\chapter{CANDIDATE'S DECLARATION}
+{\large
+We hereby certify that we have properly checked and verified all the items as prescribed in
+the check-list and ensure that our report is in proper format as specified in the
+guideline for report preparation.
+
+We also declare that the work containing in this report is our own work..We, understand
+that plagiarism is defined as any one or combination of the following:
+
+   1. To steal and pass off (the ideas or words of another) as one's own
+
+   2. To use (another's production) without crediting the source
+
+   3. To commit literary theft
+
+   4. To present as new and original an idea or product derived from an existing source.
+
+We understand that plagiarism involves an intentional act by the plagiarist of using some-
+one else's work/ideas completely/partially and claiming authorship/originality of the
+work/ideas. Verbatim copy as well as close resemblance to some else's work constitute
+Plagiarism.
+
+We have given due credit to the original authors/sources for all the words, ideas, diagrams,
+graphics, computer programs, experiments, results, websites, that are not my original
+contribution.We have used quotation marks to identify verbatim sentences and given
+credit to the original authors/sources.
+
+We affirm that no portion of our work is plagiarized, and the experiments and results
+reported in the report are not manipulated. In the event of a complaint of plagiarism and the manipulation of the experiments and results, We shall be fully responsible and answerable.Our faculty supervisor(s) will not be responsible for the
+Same.
+
+Signature:
+
+Name: SANKET KUMAR DAWAR
+\\Roll No.: 2019BCS-054
+\\Date: 29-10-2020
+
+Name: HARSHIT SINGH
+\\Roll No.: 2019BCS-025
+\\Date: 29-10-2020
+}
+\newpage
+\chapter{ABSTRACT}
+{\Large
+This project Hospital Management system includes registration of patients, storing their details into the system, and also computerized billing in the pharmacy. The software has the facility to give a unique id for every patient and stores the clinical details of every patient.
+
+ It includes a search facility to know about each patient. Users can search details of a patient using the id.. The interface is very user-friendly. The data are well protected for personal use and makes the data processing very fast.
+
+On the other hand ,we have doctor portal also.It includes addition of doctors, storing their details into the system.The software has the facility to give a unique id for every doctor and stores the clinical details of every doctor
+ It includes a search facility to know about each doctor. Users can search details of a doctor using the id.
+}
+
+{\large
+\newpage
+\chapter{INTRODUCTION}
+The IT system has revolutionised the field of medicine. In this fast-paced world of medicine, it is a daunting task to manage a multi-speciality hospital. A hospital management system (HMS) is a computer or web based system that facilitates managing the functioning of the hospital or any medical set up1. This system or software will help in making the whole functioning paperless. It integrates all the information regarding patients, doctors, staff, hospital administrative details etc. into one software4. It has sections for various professionals that make up a hospital.
+
+\section{Doctor}
+
+This section includes the list of the doctors and their schedules3. It also includes doctors’ emergency numbers. The doctor can check his schedule and that of other doctors too. This helps a doctor to edit his schedule accordingly. It includes a list of the available medicines for specific diseases so that the doctor can easily look for an alternative when in need. The patient can be given an appointment referring to the doctors’ schedule. The use of HMS makes the coordination between a doctor and patient easy and hassle free.
+
+
+\section{Patient}
+
+New patients can be registered in the system. An electronic medical record system is in-built which stores all the basic and medical details of the patient2. One can also add a feature to store photos of the patients as identity proof which can also help in medico-legal cases of false identities or fraud.
+
+\newpage
+\section{So, What is Hospital Management System (HMS):}
+
+First time HMS came into the picture of hospital management as early as 1960 and have ever since been evolving and synchronizing with the technologies while modernizing healthcare facilities. In today’s world, the management of healthcare starts from the hands of the patients through their mobile phones and facilitates the needs of the patient.\\
+
+
+In this project,\\
+Hospital management system is a computer program that helps manage the information related to the Doctors and patients in the hospital. Which is very important maintain workflow in healthcare sector. in this project we manage information such as,\\\\
+
+
+
+\begin{itemize}
+\item Doctors information
+\item Adding a new doctor
+\item Deleting a doctor
+\item Fetching doctor information 
+\item List of all doctors
+\item patients information
+\item New patient Entry
+\item List of patients
+\item Fetching patient information
+\item Discharging Patient
+\end{itemize}
+
+
+\newpage
+\chapter{REQUIREMENT ANALYSIS}
+\section{Why is HMS important for a hospital?}
+HMS was introduced to solve the complications coming from managing all the paper works of every patient associated with the various departments of hospitalization with confidentiality. HMS provides the ability to manage all the paperwork in one place, reducing the work of staff in arranging and analyzing the paperwork of the patients. HMS does many works like:
+
+\begin{itemize}
+    \item Maintain the medical records of the patient
+    \item Maintain the contact details of the patient
+    \item Keep track of the admission and discharge dates
+    \item Tracking the bill payments.
+\end{itemize}
+\\\\
+
+The advantages of HMS can be pinpointed to the following:\\
+\begin{itemize}
+    \item Time-saving Technology
+ 
+The Hospital Management System follows the standard operating procedures, and there are no chances for deviation to happen in any of the effective HMS systems. With the implementation of HMS in your labs or hospitals, you will be able to treat patients with a better way and access their real-time reports and other information regarding the patients, and their past clinical data and more can be done quickly and lead to best patient outcomes. Hospital management systems make employees work more accessible and improve the speed of the complete processes for better results.\\
+
+    \item Improved Efficiency by avoiding human errors & Reduces scope for Error
+ 
+Hospital management system will help in reducing different types of errors that are made through interventions like missing billing, operational failure, clinical errors, cost leakages, missing appointments and much more.
+ 
+Every process on the hospital management system are automated, and there are plenty of tasks provided to the software to perform without human intervention as well as accurately, this reduces the error significantly.
+ 
+For example, An IPD patient final bill amount can be easily generated if your hospital is enabled by the Hospital management system as his reports and other samples bills are already billed and safe under the Patient's unique Hospital ID, and therefore the billing executive needs to generate from the system and provide the statement to the patients.
+ 
+If your hospital is not HMS enabled then you need to go with manual entries which involves too many human errors, so preferring HMS will make your billing section easier, faster, accurate and more transparent.\\
+
+    \item Data security and correct data retrieval made possible
+ 
+In a Hospital management system, they are one of the cloud-based software where everything gets interlinked, and therefore there are no chances for breaches to occur as they have high data security.
+ 
+Evidence-based medicine requires the retrieving ability as well as data ability mandatorily, and this is easily achieved through a Hospital management system. If you have Hospital management system on your hospital, then you can easily access the operational, clinical and financial data of your hospitals.\\
+
+    \item Cost effective and easily manageable
+ 
+HMS information system helps to track and control finances, reduce leakages as well as reduce manual work and therefore there is no requirement of the higher human workforce.
+ 
+Hospital management system helps to cut down the manual work done by humans in the hospitals especially for the people who take care of the record and documentation safely. Hospital management system helps in reducing the human resources costs as most of the work is automated.
+
+Cut down the cost related to storage and other associated requirements. If your hospital is entirely HMS implemented, then your hospital will go paper-free one, it's enough if you maintain the mandatory documents and other related ones in your hospital to comply with the regulation standards.\\
+
+    \item Easy access to patient data with correct patient history & Improved patient care made possible
+ 
+Enhanced work efficiency and improved patient data access mean faster and better clinical decisions. A clinician orders the solution to implement once he gets the diagnostic report on his hand, so its necessary to have speedier support for receiving the reports rapidly. All departments in the hospitals are interconnected and integrated with this automation, and this enhances the patient care quality as well as the hospital turnovers.\\
+
+    \item Easy monitoring of supplies in inventory\\
+    \item Reduces the work of documentation\\
+    \item Better Audit controls and policy compliance.\\
+
+\end{itemize} 
+
+\newpage
+\chapter{SOFTWARE DESIGN & Code}
+Our project consists of 2 header files with main.cpp\\
+
+\section{hospitalmanagement.cpp: }
+This is the Driver code using which which initiates the program.
+
+in the driver code we have included two header files which are doctor.h and patient.h which allows you to access data related to doctors database and patients database.
+
+Here, you will see to options, those are-\\
+1. Patient \\
+2. Doctor
+
+\section{doctor.h:}
+This header file mainly contains a class named 'doctor'
+which all -
+
+\subsection{init():}
+It have switch statement to execute several function and some user friendly texts
+ to work out with this program
+
+It have private data members and public member function too like:
+
+\subsection{doc-info():}
+It helps in getting the file of doctors using seekg.It display in user friendly format. 
+
+\subsection{avail():}
+It helps in checking the availability of doctors.
+
+\subsection{add-doc():}
+It adds up a new doctor in file doctor.txt i.e, in HMS.We ask for id ,name,age,experience and qualification in this function.
+
+\subsection{list-doc():}
+We show all the doctors present in the system through this function. List contains name ,id ,and several details of all the doctors.
+
+\subsection{removedoc():}
+It helps in removing records of the specific doctor.It needs the id of the doctor we want to remove.
+
+\subsection{getSpec():}
+Shows the list of all the specialization in hospital
+
+\section{patient.h:}
+We defined a class named doctor here.It have
+\subsection{init():}
+It have switch statement to execute several function and some user friendly texts
+ to work out with this program
+
+It have private data members and public member function too like:
+
+\subsection{p-info():}
+It helps in getting the file of patients using seekg.It display in user friendly format. 
+
+\subsection{avail():}
+It helps in checking the availability of doctors.Its defined as friend function in patient class.
+
+\subsection{new-p():}
+It adds up a new patient in file patient.txt i.e, in HMS.We ask for id ,name,age,phone, disease etc in this function. 
+
+\subsection{list-p():}
+We show all the patients present in the system through this function. List contains name ,id ,and several details of all the patients.
+
+\subsection{discharge():}
+It helps in removing records of the specific patient.It needs id of the patient we want to remove.
+
+\subsection{bill():}
+Checks for medical store bills and generates total bill (used while discharging the patient.
+
+\subsection{getDept():}
+Shows the list of all the specialization in hospital
+
+\subsection{getDoctor():}
+Shows the list of all the specializations in the hospital for the patient to choose. It shows the doctor list having that specific specialization with his id and other details.
+
+\newpage
+
+\chapter{CONCLUSION}
+Taking into account all the mentioned details, we can make the conclusion that the hospital management system is the inevitable part of the lifecycle of the modern medical institution. It automates numerous daily operations and enables smooth interactions of the users. Developing the hospital system software is a great opportunity to create the distinct, efficient and fast delivering healthcare model. Implementation of hospital management system projects helps to store all kinds of records, provide coordination and user communication, implement policies, improve day-to-day operations, arrange the supply chain, manage financial and human resources, and market hospital services. This beneficial decision covers the needs of the patients, staff and hospital authorities and simplifies their interactions. It has become the usual approach to manage the hospital. Many clinics have already experienced its advantages and continue developing new hospital management system project modules.
+
+
+\newpage
+
+\chapter{FUTURE SCOPE}
+Hospitals and healthcare centers have undergone a change for its betterment. The administrations of the healthcare sector are opting IT solutions for the better management and patient care in their hospital campus. Have a look at some salient features of hospital management software.\\
+Daily functions like patient registration, monitoring blood banks, managing admission and overall management of various departments can be easily performed with higher accuracy after the installation of hospital software.\\
+The modules of hospital management software are user-friendly and easy to access. It has a common user friendly interface having several modules. The officials can utilize these modules in their processes without any hassle and make the best possible use of the hospital management system.\\
+Since, every hospital has some or the other points of worth, those vary in comparison with its competitors. Hence, most of the IT companies give on-demand solutions or features of customization. It further implicates that hospital information management software can be customized by specifying personal requirements of the campus.\\
+The automated functions of online hospital software make productivity effective. This web based IT solution has automated operations and permits officials to continue with their work in a swift manner. It further implicates that complete automation of the hospital software makes productivity easily obtainable. All in all, this enhances the infrastructure of hospital administration.
+
+
+}
+
+
+\end{document}
