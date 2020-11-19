@@ -39,6 +39,8 @@ class doctor{
 		int list_doc();
 		int removedoc();
         string getSpec();
+	
+	//friend int patient::check();
 
 
     int init(){
@@ -104,24 +106,23 @@ class doctor{
 }
 };
 
+
+// doctor's info will be printed here when entered correct  
 int doctor::doc_info(){
 	system("cls");
-    cout<<"printing list of doctor\n";
     {
     int x;
     cout<<"\n\nEnter the ID of the Doctor whose profile you want to display:"<<endl;
 	cin>>x;
 	ifstream file;file.open("doctor.txt",ios::out|ios::in);
+
+	// this will search ID in the file
 	file.seekg(0);
 		int count=0;
-	//int ID,age,exp,count=0;
-	//string fname,lname,ci,qua,spe;
-	
-//	 if (file.is_open())
-// 		 cout << "File successfully open";
-//	else
-//    cout << "Error opening file";
-  
+
+
+	//if the ID is found the then each line 
+	//is stored in each variable below in same sequence 
 	while(file >> id >> fname >> lname >>age >>qual >> spe >>exp >> city)   //!fileObj.eof()
 	{
 	
@@ -251,16 +252,14 @@ int doctor::list_doc(){
 	cout<<"list of doctors"<<endl;
 	fstream fileObj("doctor.txt");
 	fileObj.seekg(0);
-	//cout<<right<<setw(70)<<setfill(' ')<<"DOCTOR DATABASE"<<endl<<endl;
+
 	cout<<"\t\t\tDOCTORS LIST"<<endl<<endl;
-	//int age,exp;
+
 	int count=0;
-	//string ID,fname,lname,ci,qua,spe;
+
 	cout<<"Serial.no  "<<"ID\t"<<"Name\t"<<"\tAge(years)\t"<<"Qualification\t"<<"Specialisation\t"<<"Experience(years)\t"<<"City"<<endl<<endl;
 	while(fileObj>>id>>fname>>lname>>age>>qual>>spe>>exp>>city)
 	{	count++;
-		//cout<<right<<setw(50)<<setfill(' ')<<"Doctor Profile:"<<count<<endl;
-		//cout<<"\n\n1.ID:"<<ID<<endl<<"2.First Name:"<<fname<<endl<<"3.Last Name:"<<lname<<endl<<"4.Age:"<<age<<endl<<"5.Qualification:"<<qua<<endl<<"6.Specialization:"<<spe<<endl<<"7.Experience:"<<exp<<endl<<"8.City:"<<ci<<endl<<endl;
 		cout<<count<<"\t"<<id<<"\t"<<fname<<" "<<lname<<"\t"<<age<<"\t"<<"\t"<<qual<<"\t"<<"\t"<<spe<<"\t"<<"\t"<<exp<<"\t"<<"\t"<<city;
 		cout<<endl;
 	}
@@ -324,7 +323,8 @@ int doctor::removedoc(){
 	int skip = 0;
 	int age1,exp1;
 		string fname1,lname1,ci1,qua1,spe1;
-		file.seekg(0);file.seekg(0,ios::cur); //setting the pointer to beginning of file
+
+		file.seekg(0);file.seekg(0,ios::cur);   //setting the pointer to beginning of file
 			
 	//	 if (tempObj.is_open())
 	// 		 cout << "File successfully open";
